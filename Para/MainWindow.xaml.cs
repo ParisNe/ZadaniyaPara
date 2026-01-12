@@ -24,5 +24,12 @@ namespace Para
         {
             InitializeComponent();
         }
+        private void BackButton_Click(object sender, RoutedEventArgs e)
+        {
+            if (MainFrame.CanGoBack)
+            {
+                MainFrame.GoBack();
+            }
+        }
     }
 }
