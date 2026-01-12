@@ -6,15 +6,46 @@
       xmlns:local="clr-namespace:Para.Pages"
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
-      Title="OptionsPage" Background="White">
+      Title="OptionsPage" Background="#FFFFC0CB">
 
     <StackPanel>
-        <ComboBox>
-            <TextBlock>Tom</TextBlock>
-            <TextBlock>Bob</TextBlock>
-            <TextBlock>Sam</TextBlock>
-            <TextBlock>Alice</TextBlock>
-            <Button />
+        
+        <StackPanel Orientation="Horizontal" Margin="5">
+
+            <StackPanel Orientation="Vertical">
+                <TextBlock Text="Выберите размер:" FontSize="16" FontWeight="Bold" Margin="0,0,0,10"/>
+
+            <RadioButton x:Name="MinSize" GroupName="SizeGroup" Margin="5">
+                    <TextBlock Text="Маленькая *1" FontSize="14" />
+            </RadioButton>
+
+            <RadioButton x:Name="AverageSize" GroupName="SizeGroup" Margin="5">
+                    <TextBlock Text="Средняя *1.2" FontSize="18" />
+            </RadioButton>
+
+            <RadioButton x:Name="BlackSize" GroupName="SizeGroup" Margin="5">
+                    <TextBlock Text="Большая *1.4" FontSize="22" />
+            </RadioButton>
+            </StackPanel>
+
+            <ComboBox Background="#FFFFF0F5" Width="250" Height="60" Margin="10">
+                <TextBlock FontSize="18">сыр +50₽</TextBlock>
+                <TextBlock FontSize="18">бекон +80₽</TextBlock>
+                <TextBlock FontSize="18">грибы +40₽</TextBlock>
         </ComboBox>
+        
+        <Button Content="ВЫБРАЛ ЕТО"
+         x:Name="ButtonChoice"
+         Height="50" Width="Auto" Margin="10"
+         Background="White"/>
+        </StackPanel>
+        
+        <Label FontSize="20" x:Name="cb" Content="Вы выбрали: "/>
+        <TextBlock Margin="5" Text="Итого:" FontSize="20" FontWeight="Bold" x:Name="itog2"/>
+
+        <Button x:Name="ButtonNext" 
+         Content="Оформить" Grid.Column="1"
+         Height="45" Width="230"
+         FontSize="20" Background="White"/>
     </StackPanel>
 </Page>

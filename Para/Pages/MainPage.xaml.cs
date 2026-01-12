@@ -45,5 +45,9 @@ namespace Para.Pages
 
         }
 
+        private void ButtonNext_Click(object sender, RoutedEventArgs e)
+        {
+            NavigationService.Navigate(new OptionsPage());
+        }
     }
 }

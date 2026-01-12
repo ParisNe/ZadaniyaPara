@@ -12,18 +12,19 @@
         <StackPanel>
             <ListBox FontSize="18" Height="Auto" Width="Auto" HorizontalAlignment="Left" SelectionChanged="ListBox_SelectionChanged" Background="#FFFFF0F5">
                 <ListBoxItem x:Name="ListBoxItem1">Пицца Вова: из аниме тянок, заправленная соусом (простите) пайтон. Цена:бесконечно денег(100000000000(это доллары))</ListBoxItem>
-                <ListBoxItem x:Name="ListBoxItem2">Пицца Масончик: без ГМО халяль. Цена:999 рэ</ListBoxItem>
+                <ListBoxItem x:Name="ListBoxItem2">Пицца Максончик: без ГМО халяль. Цена:999 рэ</ListBoxItem>
                 <ListBoxItem x:Name="ListBoxItem3">Пицца Машко: немношко с шерстью марсе (приятный бонус). Цена:1488 рэ</ListBoxItem>
                 <ListBoxItem x:Name="ListBoxItem4">Пицца Алешка: жирная шо пипэц. Цена:5 рэ</ListBoxItem>
                 <ListBoxItem x:Name="ListBoxItem5">Пицца Коваль: Бих спэшал внутрэ. Цена:555 рэ</ListBoxItem>
             </ListBox>
 
-            <Label FontSize="20" x:Name="tb" Content="Вы выбрали: "/>
-            <TextBlock Text="Итого:" FontSize="20" FontWeight="Bold" x:Name="itog"/>
+            <Label Margin="3" FontSize="20" x:Name="tb" Content="Вы выбрали: "/>
+            <TextBlock Margin="5" Text="Итого:" FontSize="20" FontWeight="Bold" x:Name="itog"/>
 
             <Button x:Name="ButtonNext" 
          Visibility="Collapsed"
-         Content="Следщ" Grid.Column="1" 
+         Content="Следщ" Grid.Column="1"
+         Click="ButtonNext_Click"
          Height="45" Width="230"
          FontSize="20" Background="White"/>
         </StackPanel>
