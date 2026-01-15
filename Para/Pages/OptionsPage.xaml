@@ -15,23 +15,27 @@
             <StackPanel Orientation="Vertical">
                 <TextBlock Text="Выберите размер:" FontSize="16" FontWeight="Bold" Margin="0,0,0,10"/>
 
-            <RadioButton x:Name="SmallSize" GroupName="SizeGroup" Margin="5">
-                    <TextBlock Text="Маленькая *1" FontSize="14" />
-            </RadioButton>
+                <RadioButton x:Name="SmallSize"
+                Content="Маленькая (без доплаты)" FontSize="14"
+                GroupName="SizeGroup"
+                Margin="5" Checked="SmallSize_Checked"/>
 
-            <RadioButton x:Name="AverageSize" GroupName="SizeGroup" Margin="5">
-                    <TextBlock Text="Средняя *1.2" FontSize="18" />
-            </RadioButton>
+            <RadioButton x:Name="AverageSize"
+            GroupName="SizeGroup" Margin="5"
+            Checked="AverageSize_Checked"
+            Content="Средняя (доплата *1.2)" FontSize="19"/>
 
-            <RadioButton x:Name="BigSize" GroupName="SizeGroup" Margin="5">
-                    <TextBlock Text="Большая *1.4" FontSize="22" />
-            </RadioButton>
+            <RadioButton x:Name="BigSize" 
+            GroupName="SizeGroup" Margin="5" 
+            Checked="BigSize_Checked"
+            Content="Большая (доплата *1.4)" FontSize="24"/>
+
             </StackPanel>
 
-            <ComboBox x:Name="cbDop" Background="#FFFFF0F5" Width="250" Height="60" Margin="10">
-                <TextBlock FontSize="18">сыр +50₽</TextBlock>
-                <TextBlock FontSize="18">бекон +80₽</TextBlock>
-                <TextBlock FontSize="18">грибы +40₽</TextBlock>
+            <ComboBox x:Name="DopCB" Background="#FFFFF0F5" Width="250" Height="60" Margin="10" SelectionChanged="DopCB_SelectionChanged">
+                <TextBlock x:Name="DopCB1" FontSize="18">сыр +50₽</TextBlock>
+                <TextBlock x:Name="DopCB2" FontSize="18">бекон +80₽</TextBlock>
+                <TextBlock x:Name="DopCB3" FontSize="18">грибы +40₽</TextBlock>
         </ComboBox>
         
         <Button Content="ВЫБРАЛ ЕТО"

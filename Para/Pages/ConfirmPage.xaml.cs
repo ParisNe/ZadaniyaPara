@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
+using System.Windows.Controls.Primitives;
 using System.Windows.Data;
 using System.Windows.Documents;
 using System.Windows.Input;
@@ -23,11 +24,19 @@ namespace Para.Pages
         public ConfirmPage()
         {
             InitializeComponent();
+            PizzaItog.Text += Pizza.pizza;
+            SizeItog.Text += Pizza.razmer;
+            DopItog.Text += Pizza.dobavki;
+            Itog.Text += Pizza.sum;
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-
+            if (NameUser.Text.Length < 0)
+            {
+                MessageBox.Show("Имя забыл");
+            }
+            else { MessageBox.Show("точк."); }
         }
     }
 }

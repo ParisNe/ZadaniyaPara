@@ -14,17 +14,19 @@
         FontSize="22" FontWeight="Bold"/>
         
         <TextBlock x:Name="PizzaItog"
-        FontSize="20" Text="Пицца:" Margin="5"/>
+        FontSize="20" Text="Ваш выбор:" Margin="5"/>
         <TextBlock x:Name="SizeItog"
         FontSize="20" Text="Размер:" Margin="5"/>
         <TextBlock x:Name="DopItog"
         FontSize="20" Text="Доп:" Margin="5"/>
 
+        <TextBlock x:Name="Itog" Text="Итог:" FontSize="20"/>
+
         <TextBlock Margin="5" FontSize="20"
         Text="Имя клиента:"/>
         
-        <RichTextBox Margin="0,0,5,0"
-        Height="35" Width="350"
+        <TextBox Margin="0,0,5,0"
+        Height="35" Width="350" FontSize="20"
         HorizontalAlignment="Left" x:Name="NameUser"/>
 
         <ComboBox x:Name="cbOplata" Margin="0,5,0,5" Height="40" Width="350" HorizontalAlignment="Left">

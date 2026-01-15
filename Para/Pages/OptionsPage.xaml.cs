@@ -25,15 +25,48 @@ namespace Para.Pages
         {
             InitializeComponent();
         }
+        TextBlock choice;
+        
+        private void DopCB_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            choice = DopCB.SelectedItem as TextBlock;
+        }
+        string dop;
+        private void ButtonChoice_Click(object sender, RoutedEventArgs e)
+        {
+            dop += choice.Text.ToString() + ",";
+            cb.Content = "Вы выбрали: " + dop;
+            if (choice == DopCB1) DopOpt += 50;
+            else if (choice == DopCB2) DopOpt += 80;
+            else if (choice == DopCB3) DopOpt += 40;
+            itog2.Text = $"Итог{DopOpt + NewSum}";
+            Pizza.dobavki=cb.Content.ToString();
+        }
+
+        private void SmallSize_Checked(object sender, RoutedEventArgs e)
+        {
+            NewSum=Pizza.sum;
+            Pizza.razmer=SmallSize.Content.ToString();
+        }
+
+        private void AverageSize_Checked(object sender, RoutedEventArgs e)
+        {
+            NewSum = Pizza.sum*1.2;
+            Pizza.razmer = AverageSize.Content.ToString();
+        }
+
+        private void BigSize_Checked(object sender, RoutedEventArgs e)
+        {
+            NewSum = Pizza.sum * 1.4;
+            Pizza.razmer = BigSize.Content.ToString();
+        }
 
         private void ButtonNext_Click(object sender, RoutedEventArgs e)
         {
+            Pizza.sum= NewSum + DopOpt;
+            NavigationService.Navigate(new ConfirmPage());
 
         }
 
-        private void ButtonChoice_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
     }
 }
