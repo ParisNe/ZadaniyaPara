@@ -9,5 +9,8 @@ namespace Para
     internal static class Pizza
     {
         public static int sum = 0;
+        public static string pizza;
+        public static string razmer;
+        public static string dobavki;
     }
 }

@@ -37,6 +37,7 @@
 
         <Frame Grid.Row="1" 
                x:Name="MainFrame" 
-               Source="Pages/MainPage.xaml"/>
+               Source="Pages/MainPage.xaml"
+               NavigationUIVisibility="Hidden"/>
     </Grid>
 </Window>

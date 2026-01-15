@@ -20,9 +20,20 @@ namespace Para.Pages
     /// </summary>
     public partial class OptionsPage : Page
     {
+        double NewSum, DopOpt;
         public OptionsPage()
         {
             InitializeComponent();
+        }
+
+        private void ButtonNext_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void ButtonChoice_Click(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }

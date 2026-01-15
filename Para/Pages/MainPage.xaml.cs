@@ -32,12 +32,13 @@ namespace Para.Pages
                 tb.Content = "Вы выбрали: " + selectedEngine;
 
                 //цены
-                if (choice == ListBoxItem1) Pizza.sum = 1000000000;
+                if (choice == ListBoxItem1) Pizza.sum = 1000000000; 
                 else if (choice == ListBoxItem2) Pizza.sum = 999;
                 else if (choice == ListBoxItem3) Pizza.sum = 1488;
                 else if (choice == ListBoxItem4) Pizza.sum = 5;
                 else if (choice == ListBoxItem5) Pizza.sum = 555;
 
+                Pizza.pizza = choice.Content.ToString();
 
                 ButtonNext.Visibility = Visibility.Visible;
             }
