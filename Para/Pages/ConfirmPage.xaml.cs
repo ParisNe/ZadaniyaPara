@@ -27,12 +27,12 @@ namespace Para.Pages
             PizzaItog.Text += Pizza.pizza;
             SizeItog.Text += Pizza.razmer;
             DopItog.Text += Pizza.dobavki;
-            Itog.Text += Pizza.sum;
+            Itog.Text += Pizza.sum; 
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            if (NameUser.Text.Length < 0)
+            if (NameUser.Text.Length <= 0)
             {
                 MessageBox.Show("Имя забыл");
             }

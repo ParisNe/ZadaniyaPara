@@ -47,18 +47,23 @@ namespace Para.Pages
         {
             NewSum=Pizza.sum;
             Pizza.razmer=SmallSize.Content.ToString();
+            itog2.Text = $"Итог{DopOpt + NewSum}";
+
         }
 
         private void AverageSize_Checked(object sender, RoutedEventArgs e)
         {
             NewSum = Pizza.sum*1.2;
             Pizza.razmer = AverageSize.Content.ToString();
+            itog2.Text = $"Итог{DopOpt + NewSum}";
+
         }
 
         private void BigSize_Checked(object sender, RoutedEventArgs e)
         {
             NewSum = Pizza.sum * 1.4;
             Pizza.razmer = BigSize.Content.ToString();
+            itog2.Text = $"Итог{DopOpt + NewSum}";
         }
 
         private void ButtonNext_Click(object sender, RoutedEventArgs e)
